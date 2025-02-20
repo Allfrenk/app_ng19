@@ -19,6 +19,8 @@ $dark-theme: (
   border: #48484a,
 );
 
+$theme: $light-theme !default;
+
 @mixin apply-theme($theme-map) {
   background-color: map.get($theme-map, background);
   color: map.get($theme-map, text);

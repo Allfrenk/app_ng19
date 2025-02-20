@@ -1,3 +1,68 @@
+$border-radius-base: 1px;
+
 @function border-radius($multiplier: 1) {
   @return $border-radius-base * $multiplier;
+}
+
+$border-radius-fix: (
+  "sm": 4px,
+  "md": 8px,
+  "lg": 16px,
+  "xl": 24px,
+  "full": 9999px,
+);
+
+@mixin border-radius-fix($size) {
+  border-radius: map-get($border-radius-fix, $size);
+}
+
+// _TOKENS
+@mixin center-x {
+  display: flex;
+  justify-content: center;
+}
+@mixin center-y {
+  display: flex;
+  align-items: center;
+}
+@mixin center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+// _TOKENS
+$spacing: (
+  "xs": 4px,
+  "sm": 8px,
+  "md": 16px,
+  "lg": 24px,
+  "xl": 32px,
+);
+
+@mixin padding($size) {
+  padding: map-get($spacing, $size);
+}
+
+@mixin margin($size) {
+  margin: map-get($spacing, $size);
+}
+
+// _TYPOGRAPHY
+$font-sizes: (
+  "xs": 0.75rem,
+  // 12px
+  "sm": 0.875rem,
+  // 14px
+  "md": 1rem,
+  // 16px
+  "lg": 1.25rem,
+  // 20px
+  "xl": 1.5rem,
+  // 24px
+  "xxl": 2rem // 32px,
+);
+
+@mixin font-size($size) {
+  font-size: map-get($font-sizes, $size);
 }

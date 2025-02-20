@@ -1,6 +1,9 @@
 @use "@angular/material" as mat;
 
 @use "./styles/theme.scss";
+@use "./styles/mixins";
+@use "./styles/breakpoints";
+@use "./styles/palette";
 
 $font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
   Arial, sans-serif;
@@ -13,3 +16,9 @@ body {
   margin: 0;
   font-family: $font-family;
 }
+
+$pri: #3a2e39;
+$sec: #f4d8cd;
+$ter: #1e555c;
+$alt: #edb183;
+$redd: #f15152;

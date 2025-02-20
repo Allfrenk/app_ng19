@@ -1,0 +1,15 @@
+<nav class="navbar2">
+  <div class="logo">My Logo</div>
+  <button class="hamburger" (click)="toggleMenu()">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+  <!-- Link di navigazione -->
+  <ul class="nav-links" [class.active]="menuOpen">
+    <li><a routerLink="/home1" routerLinkActive="active">Home</a></li>
+    <li><a routerLink="/about1" routerLinkActive="active">About</a></li>
+    <li><a routerLink="/services1" routerLinkActive="active">Services</a></li>
+    <li><a routerLink="/contact1" routerLinkActive="active">Contact</a></li>
+  </ul>
+</nav>
